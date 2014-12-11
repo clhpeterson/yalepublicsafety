@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141211202317) do
+ActiveRecord::Schema.define(version: 20141211220158) do
 
   create_table "cases", force: true do |t|
     t.date     "date_reported"
@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 20141211202317) do
     t.float    "longitude"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "time_string"
   end
 
 end

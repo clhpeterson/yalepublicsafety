@@ -10,5 +10,10 @@ require 'csv'
 csv = CSV.read(File.join(Rails.root, "db", "all.csv"), :encoding => 'utf-8', :headers => true)
 
 csv.each do |my_case|
-	Case.create(date_reported: my_case[0], type_of_incident: my_case[1], date_occurred: my_case[2], time_occurred: my_case[3], location: my_case[4], disposition: my_case[5])
+	Case.create(date_reported: Date.strptime(my_case['date_reported'], "%m/%d/%Y"), 
+		type_of_incident: my_case['type_of_incident'], 
+		date_occurred: Date.strptime(my_case['date_occurred'], "%m/%d/%Y"), 
+		time_occurred: my_case['time_occurred'],
+		location: my_case['location'], 
+		disposition: my_case['disposition'])
 end
