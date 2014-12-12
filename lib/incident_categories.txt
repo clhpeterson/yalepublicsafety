@@ -1,0 +1,159 @@
+assault
+	assault-weapon-non firearm
+	assaulting a police officer or firefighter
+	sex assault w/o consent
+	sex assault-forcible
+	simple assault
+theft
+	attempted theft
+	theft from auto
+	theft from motor vehicle-non auto
+	theft from person
+	theft greater miscellaneous
+	theft greater shoplifting
+	theft miscellaneous
+	theft of auto
+	theft of checks or negotiable instruments
+	theft of credit cards
+	theft of other motor vehicle
+	theft of services
+	theft university academic building
+	theft university residence building
+	theft-auto accessories
+	theft-bicycle
+	theft-greater-attempted
+	theft-greater-auto accessories
+	theft-greater-from mail
+	theft-greater-from motor vehicle
+	theft-greater-from motor vehicle-non auto
+	theft-greater-from person
+	theft-greater-public building
+	theft-greater-purse snatching
+	theft-greater-residence
+	theft-greater-university academic building
+	theft-greater-university residence building
+	theft-public building
+	theft-residence
+	theft-shoplifting
+breach of peace/disorderly conduct
+	breach of peace
+	criminal mischief-private property
+	criminal mischief-public property
+	discharging fireworks
+	disorderly conduct
+	public indecency
+	public indecency-indecent
+	window breaking
+burglary
+	burglary-apartment-non-forcible
+	burglary-attempt
+	burglary-commercial-forcible
+	burglary-nothing taken
+	burglary-other-forcible
+	burglary-other-non forcible
+	burglary-residence-non forcible
+	burglary-school/college/university-forcible
+	burglary-school/college/university-non forcible
+	manufacture or possession of burglary
+weapons
+	carrying a bb gun
+	carrying a concealed weapon
+	carrying weapon in motor vehicle
+	illegal possession of a weapon
+	possession of prohibited or unlicensed weapon
+	robbery-strt-firearm
+	robbery attempt oth weapon
+	robbery-strt-oth weapon
+	unlawful discharge of firearms
+fraud/forgery
+	confidence-flim flam
+	credit card fraud
+	criminal impersonation-non police
+	criminal simulation
+	falsely reporting an incident
+	forgery of government instruments
+	forgery-other (checks motor vehicle
+	forging narcotics prescriptions
+	issuing bad checks
+	misrepresenting age to obtain liquor
+trespassing
+	criminal trespass
+	nal trespass 3rd
+	trespassing
+dispute
+	dispute-no disturbance
+	landlord-tenant dispute
+driving while intoxicated
+	driving while intoxicated-alcohol
+	driving while intoxicated-drugs
+harassment
+	harassment
+drug offenses
+	driving while intoxicated-alcohol
+	driving while intoxicated-drugs
+	forging narcotics prescriptions
+	misrepresenting age to obtain liquor
+	other liquor offenses
+	possession of alcohol by a minor
+	possession of dangerous or controlled drugs
+	possession of heroin
+	possession of marijuana
+	possession of narcotics-general
+	possession of paraphernalia
+	sale of dangerous or controlled drugs
+alcohol
+	driving while intoxicated-alcohol
+	misrepresenting age to obtain liquor
+	other liquor offenses
+	possession of alcohol by a minor
+vehicles
+	evading responsibility
+	driving while intoxicated-alcohol
+	driving while intoxicated-drugs
+	operating motor vehicle without owner's
+	recovered license plates
+	recovered stolen auto
+	tampering with a motor vehicle
+	theft of auto
+	theft of other motor vehicle
+	theft-bicycle
+	theft-greater-bicycles
+bikes
+	theft-bicycle
+	theft-greater-bicycles
+sexual offense
+	sex assault w/o consent
+	sex assault-forcible
+	sexual contact forcible or without consent
+wanted person
+	wanted person new haven
+	wanted person other town
+violent crimes
+robbery
+	robbery attempt no weapon
+	robbery attempt oth weapon
+	robbery-strt-firearm
+	robbery-str-no weapon
+	robbery-strt-oth weapon
+miscellaneous
+	arson
+	criminal impersonation-non police
+	criminal simulation
+	cruelty to animals
+	dog bite
+	falsely reporting an incident
+	forgery of government instruments
+	gambling offenses-other
+	interfering with an officer
+	missing juvenile
+	neglect or abuse of family or child
+	other investigation
+	other miscellaneous
+	probation violation
+	reckless burning
+	reckless endangerment
+	subpoena service
+	suspicious fire
+	warrant service
+	threatening
+	violation of protective or restraining order
