@@ -9,6 +9,8 @@ require 'csv'
 
 csv = CSV.read(File.join(Rails.root, "db", "all.csv"), :encoding => 'utf-8', :headers => true)
 
+coordinates = CSV.read(File.join(Rails.root, "db", "final_coordinates.csv"), :encoding => 'utf-8', :headers => true)
+
 csv.each do |my_case|
 	Case.create(date_reported: Date.strptime(my_case['date_reported'], "%m/%d/%Y"), 
 		type_of_incident: my_case['type_of_incident'], 
@@ -16,4 +18,14 @@ csv.each do |my_case|
 		time_occurred: my_case['time_occurred'],
 		location: my_case['location'], 
 		disposition: my_case['disposition'], weekday: Date.strptime(my_case['date_occurred'], "%m/%d/%Y").strftime("%A"))
+end
+
+
+i = 1
+coordinates.each do |coordinate|
+	my_case = Case.find(i)
+	my_case.latitude = coordinate['latitude']
+	my_case.longitude = coordinate['longitude']
+	my_case.save
+	i += 1
 end
