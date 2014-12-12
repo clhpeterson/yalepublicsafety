@@ -1,0 +1,18 @@
+<h1>All incidents</h1>
+<table class="cases">
+<tr>
+	<td>Date reported</td>
+	<td>Incident</td>
+	<td>Date Occurred</td>
+	<td>Time Occurred</td>
+	<td>Location</td>
+<% @cases.each do |c| %>
+<tr>
+	<td><%= c.date_reported %></td>
+	<td><%= c.type_of_incident %></td>
+	<td><%= c.date_occurred %></td>
+	<td><%= c.time_occurred %></td>
+	<td><%= c.location %></td>
+</tr>
+<% end %>
+</table>
