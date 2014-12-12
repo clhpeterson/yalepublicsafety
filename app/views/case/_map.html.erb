@@ -1,4 +1,13 @@
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=visualization"></script>
+<script>
+	var crimeData = [
+		<% @cases.each do |c| %>
+		<% if /\d+.*/ =~ c.location %>
+			new google.maps.LatLng(<%= c.latitude %>, <%= c.longitude %>),
+		<% end %>
+		<% end %>
+	];
+</script>
 <div id="cases-map">
 <div id="map-canvas"></div>
 
