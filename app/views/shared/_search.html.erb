@@ -1,35 +1,39 @@
 <div class="search">
 	<div class="search-inner">
-	<h3>Find Incidents</h3>
-	<%= form_tag({controller: "case", action: "search"}, method:"get") do %>
-		<div>
-		Between <%= select_date Date.today, prefix: :start_date %>
-		and <%= select_date Date.today, prefix: :end_date %>
-		<br />
-		Time of incident between 
-		<%= select_time Time.now.change(:hour => 0, :minute => 0), prefix: :start_time %>
-		and
-		<%= select_time Time.now.change(:hour => 23, :minute => 59), prefix: :end_time %>
+		<div class="titlebar">
+			Find Incidents
 		</div>
-		<div>
-			<h4>Matching:</h4>
-			<div id="columns">
-				<div class="column left">
-					<ul>
-						<!--CHECKBOX ELEMENTS GO HERE -->
-					</ul>
+		<div class="form-contents">
+			<%= form_tag({controller: "case", action: "search"}, method:"get") do %>
+				<div>
+				Between <%= select_date Date.today, prefix: :start_date %>
+				and <%= select_date Date.today, prefix: :end_date %>
+				<br />
+				Time of incident between 
+				<%= select_time Time.now.change(:hour => 0, :minute => 0), prefix: :start_time %>
+				and
+				<%= select_time Time.now.change(:hour => 23, :minute => 59), prefix: :end_time %>
 				</div>
-				<div class="column right">
-					<ul>
-						<!--CHECKBOX ELEMENTS GO HERE -->
-					</ul>
+				<div>
+					<h4>Matching:</h4>
+					<div id="columns">
+						<div class="column left">
+							<ul>
+								<!--CHECKBOX ELEMENTS GO HERE -->
+							</ul>
+						</div>
+						<div class="column right">
+							<ul>
+								<!--CHECKBOX ELEMENTS GO HERE -->
+							</ul>
+						</div>
+					</div>
 				</div>
-			</div>
+				<div class="separator"></div>
+				<div id="submit">
+					<%= submit_tag "Search" %>
+				</div>
+			<% end %>
 		</div>
-		<div class="separator"></div>
-		<div id="submit">
-			<%= submit_tag "Search" %>
-		</div>
-	<% end %>
 	</div>
 </div>

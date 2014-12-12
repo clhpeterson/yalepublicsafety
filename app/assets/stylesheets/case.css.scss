@@ -26,10 +26,22 @@ $search_background:#E3E3E3;
 	.search-inner {
 		margin:0px;
 		margin-top:10px;
-		padding:10px;
+		padding:0px;
 		text-align:left;
 		display:inline-block;
 		background-color: $search_background;
+	}
+	.titlebar {
+		padding:0px;
+		padding-left:5px;
+		font-size:12pt;
+		font-weight:bold;
+		color:white;
+		background-color:gray;
+	}
+
+	.form-contents {
+		padding:10px;
 	}
 
 	#submit {
