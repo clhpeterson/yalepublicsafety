@@ -4,6 +4,7 @@
 
 $table_border:#DEDEDE;
 $search_background:#E3E3E3;
+$results_background:#5BC2D9;
 
 .cases {
 	table {
@@ -18,6 +19,19 @@ $search_background:#E3E3E3;
 	.heading {
 		font-weight:bold;
 	}
+}
+#results {
+	overflow:auto;
+	margin:10px;
+	background-color:$results_background;
+}
+#map-container {
+	margin:10px;
+	float:left;
+}
+#search-container {
+	margin:10px;
+	float:right;
 }
 
 .search {

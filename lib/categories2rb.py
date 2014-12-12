@@ -29,7 +29,7 @@ def get_types_as_dict(filename):
     return narrow
 
 def write_ruby_from_list(iterable):
-    for item in iterable:
+    for item in sorted(iterable):
         first = re.sub(r"[^a-z].*","",item)
         print ('<li><%%= check_box_tag :%s %%><%%= label_tag :%s, "%s"%%></li>'%
                (first, first, item.capitalize()))
@@ -42,5 +42,8 @@ def write_ruby_from_dict(narrow_dict):
         print ('<li data_case_category="%s"><%%= check_box_tag :"%s" %%><%%= label_tag :"%s", "%s"%%></li>'%
                (firsts, keynam, keynam, key.capitalize()))
 
-narrow = get_types_as_dict("incident_categories.txt")
-write_ruby_from_dict(narrow)
+#narrow = get_types_as_dict("incident_categories.txt")
+#write_ruby_from_dict(narrow)
+
+broad, narrow = get_types_as_array("incident_categories.txt")
+write_ruby_from_list(broad)

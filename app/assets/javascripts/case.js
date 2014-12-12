@@ -30,7 +30,7 @@ function updateNarrow(id) {
 	var is_checked = $(".left input[id="+id+"]").prop("checked");
 	$(".right li[data_case_category*="+id+"]").each(function(){
 		$("input", this).prop("checked", is_checked);
-		if(!is_checked) {
+		/*if(!is_checked) {
 			var cats = $(this).attr("data_case_category").split(" ");
 			var should_hide = true;
 			for (var i = cats.length - 1; i >= 0; i--) {
@@ -44,7 +44,7 @@ function updateNarrow(id) {
 			}
 		} else {
 			$(this).show();
-		}
+		}*/
 	});
 
 }
