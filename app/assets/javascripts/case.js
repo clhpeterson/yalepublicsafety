@@ -35,7 +35,7 @@ function updateNarrow(id) {
 			var cats = $(this).attr("data_case_category").split(" ");
 			var should_hide = true;
 			for (var i = cats.length - 1; i >= 0; i--) {
-				if($(".left input[id="+id+"]").prop("checked")) {
+				if($(".left input[id="+cats[i]+"]").prop("checked")) {
 					should_hide = false;
 					break;
 				}
