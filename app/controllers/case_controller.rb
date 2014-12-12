@@ -1,8 +1,13 @@
 class CaseController < ApplicationController
   def search
-  	@cases = Case.all
+  	if params[:type]
+  		@cases = Case.where("type_of_incident = ?", params[:type].upcase)
+  	else
+  		@cases = Case.all
+  	end
+  	render "show"
   end
-  def index
+  def show
   	@cases = Case.all
   end
 end

@@ -1,3 +1,65 @@
 // Place all the styles related to the case controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+$table_border:#DEDEDE;
+$search_background:#E3E3E3;
+
+.cases {
+	table {
+		margin:auto;
+		border: 1px solid $table_border;
+		border-collapse:collapse;
+	}
+	td {
+		border: 1px solid $table_border;
+		padding: 1px 5px 1px 5px;
+	}
+	.heading {
+		font-weight:bold;
+	}
+}
+
+.search {
+	margin:0px;
+	text-align:center;
+	.search-inner {
+		margin:0px;
+		margin-top:10px;
+		padding:10px;
+		text-align:left;
+		display:inline-block;
+		background-color: $search_background;
+	}
+
+	#submit {
+		margin:10px;
+		text-align:center;
+	}
+
+	ul {
+		list-style-type: none;
+		float:none;
+		margin:0px;
+		padding:0px;
+	}
+	#columns {
+		width:70%;
+		margin:auto;
+	}
+	.column {
+		height:200px;
+		overflow:auto;
+		width:47%;
+		text-align:center;
+		background-color:white;
+	}
+	.left {
+		float:left;
+		margin-right:3%;
+	}
+	.right {
+		float:right;
+		margin-left:3%;
+	}
+}

@@ -1,6 +1,8 @@
+<%= render "shared/search" %>
 <h1>All incidents</h1>
-<table class="cases">
-<tr>
+<div class="cases">
+<table>
+<tr class="heading">
 	<td>Date reported</td>
 	<td>Incident</td>
 	<td>Date Occurred</td>
@@ -11,8 +13,9 @@
 	<td><%= c.date_reported %></td>
 	<td><%= c.type_of_incident %></td>
 	<td><%= c.date_occurred %></td>
-	<td><%= c.time_occurred %></td>
+	<td><%= c.time_occurred.strftime "%l:%M %P" %></td>
 	<td><%= c.location %></td>
 </tr>
 <% end %>
 </table>
+</div>
