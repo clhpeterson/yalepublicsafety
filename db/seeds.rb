@@ -15,5 +15,5 @@ csv.each do |my_case|
 		date_occurred: Date.strptime(my_case['date_occurred'], "%m/%d/%Y"), 
 		time_occurred: my_case['time_occurred'],
 		location: my_case['location'], 
-		disposition: my_case['disposition'])
+		disposition: my_case['disposition'], weekday: Date.strptime(my_case['date_occurred'], "%m/%d/%Y").strftime("%A"))
 end

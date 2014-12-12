@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141211220158) do
+ActiveRecord::Schema.define(version: 20141212005126) do
 
   create_table "cases", force: true do |t|
     t.date     "date_reported"
@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 20141211220158) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "time_string"
+    t.string   "weekday"
   end
 
 end
