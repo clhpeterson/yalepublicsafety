@@ -29,7 +29,6 @@ function handleChecked(checkbox, columns) {
 function updateNarrow(id) {
 	var is_checked = $(".left input[id="+id+"]").prop("checked");
 	$(".right li[data_case_category*="+id+"]").each(function(){
-		console.log($(this));
 		$("input", this).prop("checked", is_checked);
 		if(!is_checked) {
 			var cats = $(this).attr("data_case_category").split(" ");
