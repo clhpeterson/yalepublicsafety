@@ -48,7 +48,9 @@ $search_background:#E3E3E3;
 		margin:10px;
 		text-align:center;
 	}
-
+	#any {
+		margin-bottom:10px;
+	}
 	ul {
 		list-style-type: none;
 		float:none;
@@ -56,14 +58,15 @@ $search_background:#E3E3E3;
 		padding:0px;
 	}
 	#columns {
-		width:70%;
+		width:95%;
 		margin:auto;
 	}
 	.column {
 		height:200px;
 		overflow:auto;
 		width:47%;
-		text-align:center;
+		text-align:left;
+		font-size:10pt;
 		background-color:white;
 	}
 	.left {

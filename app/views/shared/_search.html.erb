@@ -15,16 +15,19 @@
 				<%= select_time Time.now.change(:hour => 23, :minute => 59), prefix: :end_time %>
 				</div>
 				<div>
-					<h4>Matching:</h4>
+					<h4>Matching incident type:</h4>
+					<div id="any">
+						<%= check_box_tag :all %><%= label_tag :all, "Any" %>
+					</div>
 					<div id="columns">
 						<div class="column left">
 							<ul>
-								<!--CHECKBOX ELEMENTS GO HERE -->
+								<%= render "shared/inclasses" %>
 							</ul>
 						</div>
 						<div class="column right">
 							<ul>
-								<!--CHECKBOX ELEMENTS GO HERE -->
+								<%= render "shared/intypes" %>
 							</ul>
 						</div>
 					</div>
