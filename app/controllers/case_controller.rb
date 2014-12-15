@@ -9,12 +9,13 @@ class CaseController < ApplicationController
     start_time = DateTime.new(2000, 1, 1, params[:start_time][:hour].to_i, params[:start_time][:minute].to_i, 0)
     end_time = DateTime.new(2000, 1, 1, params[:end_time][:hour].to_i, params[:end_time][:minute].to_i, 0)
     time_range = start_time..end_time
+    puts params[:incidents]
     if params[:all] != "1"
-      all_types = get_types_to_check()
-      puts params[:"DRIVING WHILE INTOXICATED-ALCOHOL"]
-      @cases = Case.where(time_occurred: time_range, date_occurred: date_range, weekday: params[:weekday][:day], type_of_incident: all_types)
+      #all_types = get_types_to_check()
+      #puts params[:"DRIVING WHILE INTOXICATED-ALCOHOL"]
+      @cases = Case.where(time_occurred: time_range, date_occurred: date_range, type_of_incident: params[:incidents])
     else
-      @cases = Case.where(time_occurred: time_range, date_occurred: date_range, weekday: params[:weekday][:day])
+      @cases = Case.where(time_occurred: time_range, date_occurred: date_range)
     end
   	render "show"
   end
