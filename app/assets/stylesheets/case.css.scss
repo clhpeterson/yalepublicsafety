@@ -5,6 +5,7 @@
 $table_border:#DEDEDE;
 $search_background:#E3E3E3;
 $results_background:#5BC2D9;
+$map_search_height:450px;
 
 .cases {
 	table {
@@ -22,24 +23,33 @@ $results_background:#5BC2D9;
 }
 #results {
 	overflow:auto;
-	margin:10px;
+	text-align:center;
+	margin:auto;
 	background-color:$results_background;
 }
 #map-container {
 	margin:10px;
-	float:left;
+	width:59%;
+	margin-left:5px;
+	height:$map_search_height;
+	display:inline-block;
 }
 #search-container {
 	margin:10px;
-	float:right;
+	margin-right:5px;
+	width:38%;
+	height:$map_search_height;
+	display:inline-block;
 }
 
 .search {
 	margin:0px;
+	width:100%;
+	height:100%;
 	text-align:center;
 	.search-inner {
+		height:100%;
 		margin:0px;
-		margin-top:10px;
 		padding:0px;
 		text-align:left;
 		display:inline-block;
