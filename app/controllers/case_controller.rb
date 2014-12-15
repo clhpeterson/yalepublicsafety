@@ -12,9 +12,9 @@ class CaseController < ApplicationController
     if params[:all] != "1"
       all_types = get_types_to_check()
       puts params[:"DRIVING WHILE INTOXICATED-ALCOHOL"]
-      @cases = Case.where(time_occurred: time_range, date_occurred: date_range, type_of_incident: all_types)
+      @cases = Case.where(time_occurred: time_range, date_occurred: date_range, weekday: params[:weekday][:day], type_of_incident: all_types)
     else
-      @cases = Case.where(time_occurred: time_range, date_occurred: date_range)
+      @cases = Case.where(time_occurred: time_range, date_occurred: date_range, weekday: params[:weekday][:day])
     end
   	render "show"
   end
