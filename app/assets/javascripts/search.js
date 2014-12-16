@@ -12,6 +12,13 @@ $(".search").ready(function(){
 		$(".arrow", $(this).parent()).text("▼");
 	});
 
+	$("input#start_date").datepicker({
+			dateFormat:"yy-mm-dd"
+		});
+	$("input#end_date").datepicker({
+			dateFormat:"yy-mm-dd"
+		});
+
 });
 
 function updateNarrow(value) {

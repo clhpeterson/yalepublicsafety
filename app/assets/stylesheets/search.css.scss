@@ -3,9 +3,12 @@ $search_background:#E3E3E3;
 .search {
 	margin:10px;
 	margin-right:5px;
+	height:450px;
+	position:relative;
 	.search-inner {
 		margin:0px;
 		padding:0px;
+		height:100%;
 		text-align:left;
 		background-color: $search_background;
 	}
@@ -27,9 +30,19 @@ $search_background:#E3E3E3;
 		color:white;
 		background-color:gray;
 	}
-
+	#date-select {
+		text-align:center;
+	}
+	.date-columns {
+		width:40%;
+		text-align:left;
+		display:inline-block;
+		vertical-align:top;
+	}
 	#submit {
-		margin:10px;
+		position:absolute;
+		bottom:10px;
+		width:100%;
 		text-align:center;
 	}
 	#any {

@@ -19,21 +19,25 @@
 						<span class="arrow">&#9654;</span> Search by date
 					</div>
 				</a>
-				<div class="contents hidden">
-					Between <%= select_date @start_date, prefix: :start_date, order: [:month, :day, :year], start_year: 2013, end_year: Date.today.year %>
-					and <%= select_date @end_date, prefix: :end_date, order: [:month, :day, :year], start_year: 2013, end_year: Date.today.year %>
-					<br />
-					Time of incident between 
-					<%= select_time @start_time, prefix: :start_time, ampm: true%>
-					and
-					<%= select_time @end_time, prefix: :end_time, ampm: true %>
-					<br />
-					Day of the week
-					<ul>
-						<% (Case::DAYS).each do |day| %>
-							<li><%= check_box_tag "days[]", day, @days.include?(day) %><%= label_tag :day, day %></li>
-						<% end %>
-					</ul>
+				<div class="contents hidden" id="date-select">
+					<div class="date-columns">
+						Start date:<br />
+						<%= text_field_tag :start_date, @start_date.to_s %> <br />
+						End date:<br />
+						<%= text_field_tag :end_date, @end_date.to_s %> <br />
+						Start time:<br />
+						<%= select_time @start_time, prefix: :start_time, ampm: true%> <br />
+						End time:<br />
+						<%= select_time @end_time, prefix: :end_time, ampm: true %> <br />
+					</div>
+					<div class="date-columns">
+						Day of the week
+						<ul>
+							<% (Case::DAYS).each do |day| %>
+								<li><%= check_box_tag "days[]", day, @days.include?(day) %><%= label_tag :day, day %></li>
+							<% end %>
+						</ul>
+					</div>
 				</div>
 			</div>
 			<div class="expandable">
