@@ -10,12 +10,15 @@
 <h1>All incidents</h1>
 <div class="cases">
 <table>
-<tr class="heading">
-	<td>Date reported</td>
-	<td>Incident</td>
-	<td>Date Occurred</td>
-	<td>Time Occurred</td>
-	<td>Location</td>
+	<thead>
+		<tr class="heading">
+			<th>Date reported</th>
+			<th>Incident</th>
+			<th>Date Occurred</th>
+			<th>Time Occurred</th>
+			<th>Location</th>
+		</tr>
+	</thead>
 <% @cases.each do |c| %>
 <tr>
 	<td><%= c.date_reported %></td>
