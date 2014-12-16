@@ -20,16 +20,20 @@
 					</div>
 				</a>
 				<div class="contents hidden">
-				Between <%= select_date @start_date, prefix: :start_date, order: [:month, :day, :year] %>
-				and <%= select_date @end_date, prefix: :end_date, order: [:month, :day, :year] %>
-				<br />
-				Time of incident between 
-				<%= select_time @start_time, prefix: :start_time%>
-				and
-				<%= select_time @end_time, prefix: :end_time %>
-				<br />
-				Day of the week
-				<%= select(:weekday, :day, Case::DAYS) %>
+					Between <%= select_date @start_date, prefix: :start_date, order: [:month, :day, :year], start_year: 2013, end_year: Date.today.year %>
+					and <%= select_date @end_date, prefix: :end_date, order: [:month, :day, :year], start_year: 2013, end_year: Date.today.year %>
+					<br />
+					Time of incident between 
+					<%= select_time @start_time, prefix: :start_time, ampm: true%>
+					and
+					<%= select_time @end_time, prefix: :end_time, ampm: true %>
+					<br />
+					Day of the week
+					<ul>
+						<% (Case::DAYS).each do |day| %>
+							<li><%= check_box_tag "days[]", day, @days.include?(day) %><%= label_tag :day, day %></li>
+						<% end %>
+					</ul>
 				</div>
 			</div>
 			<div class="expandable">
@@ -39,9 +43,6 @@
 					</div>
 				</a>
 				<div class="contents hidden">
-					<div id="any">
-						<%= check_box_tag :all, '1', false %><%= label_tag :all, "Any" %>
-					</div>
 					<div id="columns">
 						<div class="column left">
 							<ul>
