@@ -1,6 +1,5 @@
 $(".search").ready(function(){
-	var columns = $("#columns");
-	var allbox = $("input#all");
+	var allbox = $(":checkbox#all");
 
 	handleChecked(allbox, columns);
 	$(".left input").each(function() {
@@ -8,7 +7,7 @@ $(".search").ready(function(){
 	});
 	
 	allbox.click(function(){
-		handleChecked($(this), columns);
+		handleChecked($(this));
 	});
 
 	$(".left input").click(function() {
@@ -17,12 +16,14 @@ $(".search").ready(function(){
 
 });
 
-function handleChecked(checkbox, columns) {
+function handleChecked(checkbox) {
 	if(checkbox.is(':checked')) {
-		columns.hide();
+		$("#columns :checkbox").prop("disabled", true);
+		$("#columns label").addClass("disabled");
 		$("input", columns).prop("checked", false);
 	} else {
-		columns.show();
+		$("#columns :checkbox").prop("disabled", false);
+		$("#columns label").removeClass("disabled");
 	}
 }
 
