@@ -22,13 +22,17 @@
 				<div class="contents hidden" id="date-select">
 					<div class="date-columns">
 						Start date:<br />
-						<%= text_field_tag :start_date, @start_date.to_s %> <br />
+							<%= text_field_tag :start_date, @start_date.to_s %> <br />
 						End date:<br />
-						<%= text_field_tag :end_date, @end_date.to_s %> <br />
+							<%= text_field_tag :end_date, @end_date.to_s %> <br />
 						Start time:<br />
-						<%= select "start_time", "hour", Case::HOURS, selected: "12" %><%= select "time", "minute", Case::MINUTES, selected: "00" %><%= select "time", "ampm", ["AM", "PM"], selected: "AM" %> <br />
+							<%= select "start_time", "hour", Case::HOURS, selected: @start_hour %>
+							<%= select "start_time", "minute", Case::MINUTES, selected: @start_minute %>
+							<%= select "start_time", "ampm", ["AM", "PM"], selected: @start_ampm %> <br />
 						End time:<br />
-						<%= select "end_time", "hour", Case::HOURS, selected: "11" %><%= select "time", "minute", Case::MINUTES, selected: "59" %><%= select "time", "ampm", ["AM", "PM"], selected: "PM" %><br />
+							<%= select "end_time", "hour", Case::HOURS, selected: @end_hour %>
+							<%= select "end_time", "minute", Case::MINUTES, selected: @end_minute %>
+							<%= select "end_time", "ampm", ["AM", "PM"], selected: @end_ampm %><br />
 					</div>
 					<div class="date-columns">
 						Day of the week

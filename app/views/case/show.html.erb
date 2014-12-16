@@ -8,25 +8,27 @@
 </div>
 <div class="separator"></div>
 <h1>All incidents</h1>
-<div class="cases">
-<table>
-	<thead>
-		<tr class="heading">
-			<th>Date reported</th>
-			<th>Incident</th>
-			<th>Date Occurred</th>
-			<th>Time Occurred</th>
-			<th>Location</th>
-		</tr>
-	</thead>
-<% @cases.each do |c| %>
-<tr>
-	<td><%= c.date_reported %></td>
-	<td><%= c.type_of_incident %></td>
-	<td><%= c.date_occurred %></td>
-	<td><%= c.time_occurred.strftime "%l:%M %P" %></td>
-	<td><%= c.location %></td>
-</tr>
+<% if @cases.count != 0 %>
+	<div class="cases">
+	<table>
+		<thead>
+			<tr class="heading">
+				<th>Date reported</th>
+				<th>Incident</th>
+				<th>Date Occurred</th>
+				<th>Time Occurred</th>
+				<th>Location</th>
+			</tr>
+		</thead>
+	<% @cases.each do |c| %>
+	<tr>
+		<td><%= c.date_reported %></td>
+		<td><%= c.type_of_incident %></td>
+		<td><%= c.date_occurred %></td>
+		<td><%= c.time_occurred.strftime "%l:%M %P" %></td>
+		<td><%= c.location %></td>
+	</tr>
+	<% end %>
+	</table>
+	</div>
 <% end %>
-</table>
-</div>
