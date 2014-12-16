@@ -22,8 +22,15 @@
  body {
  	margin: 0px;
  	height:100%;
+ 	background-color:#3D4447;
  }
 .separator {
 	float:none;
 	clear:both;
 }
+#page-content {
+	margin:20px;
+	background-color:white;
+}
+
+#ui-datepicker-div {display:none;}
