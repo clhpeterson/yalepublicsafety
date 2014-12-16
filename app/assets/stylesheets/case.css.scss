@@ -7,12 +7,17 @@ $results_background:white;
 
 .cases {
 	table {
+		width:100%;
 		margin:auto;
 		border: 1px solid $table_border;
 		border-collapse:collapse;
+		//color:#32CF21;
 	}
 	tr th {
 		border: 1px solid $table_border;
+	}
+	th {
+		text-align:left;
 	}
 	td {
 		border: 1px solid $table_border;
@@ -25,7 +30,7 @@ $results_background:white;
 #results {
 	text-align:center;
 	margin:auto;
-	background-color:$results_background;
+	margin-top:15px;
 	display:table;
 }
 #map-container {
