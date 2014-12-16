@@ -14,6 +14,15 @@ $(".search").ready(function(){
 		updateNarrow($(this).attr("id"));
 	});
 
+	$(".expandable a").click(function( event ) {
+		event.preventDefault();
+		console.log("was clicked");
+		$(".search .contents").addClass("hidden");
+		$(".search .arrow").text("▶");
+		$(".contents", $(this).parent()).removeClass("hidden");
+		$(".arrow", $(this).parent()).text("▼");
+	});
+
 });
 
 function handleChecked(checkbox) {
@@ -31,21 +40,6 @@ function updateNarrow(id) {
 	var is_checked = $(".left input[id="+id+"]").prop("checked");
 	$(".right li[data_case_category*="+id+"]").each(function(){
 		$("input", this).prop("checked", is_checked);
-		/*if(!is_checked) {
-			var cats = $(this).attr("data_case_category").split(" ");
-			var should_hide = true;
-			for (var i = cats.length - 1; i >= 0; i--) {
-				if($(".left input[id="+cats[i]+"]").prop("checked")) {
-					should_hide = false;
-					break;
-				}
-			}
-			if(should_hide) {
-				$(this).hide();
-			}
-		} else {
-			$(this).show();
-		}*/
 	});
 
 }

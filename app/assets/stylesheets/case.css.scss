@@ -3,7 +3,6 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 $table_border:#DEDEDE;
-$search_background:#E3E3E3;
 $results_background:white;
 
 .cases {
@@ -35,57 +34,4 @@ $results_background:white;
 }
 #search-container {
 	display:table-cell;
-}
-
-.search {
-	margin:10px;
-	margin-right:5px;
-	.search-inner {
-		margin:0px;
-		padding:0px;
-		text-align:left;
-		background-color: $search_background;
-	}
-	.titlebar {
-		padding:0px;
-		padding-left:5px;
-		font-size:12pt;
-		font-weight:bold;
-		color:white;
-		background-color:gray;
-	}
-
-	.form-contents {
-		padding:10px;
-	}
-
-	#submit {
-		margin:10px;
-		text-align:center;
-	}
-	#any {
-		margin-bottom:10px;
-	}
-	ul {
-		list-style-type: none;
-		margin:0px;
-		padding:0px;
-	}
-	#columns {
-		width:95%;
-		margin:auto;
-		text-align:center;
-	}
-	.column {
-		height:200px;
-		overflow:auto;
-		width:40%;
-		text-align:left;
-		font-size:10pt;
-		display:inline-block;
-		background-color:white;
-	}
-	.disabled {
-		color:gray;
-	}
 }

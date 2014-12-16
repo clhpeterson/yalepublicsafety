@@ -1,24 +1,44 @@
 <div class="search">
 	<div class="search-inner">
-		<div class="titlebar">
-			Find Incidents
-		</div>
-		<div class="form-contents">
-			<%= form_tag({controller: "case", action: "search"}, method:"post") do %>
-				<div>
-				Between <%= select_date Date.new(2013,5,17), prefix: :start_date %>
-				and <%= select_date Date.today, prefix: :end_date %>
-				<br />
-				Time of incident between 
-				<%= select_time Time.new(2001,1, 1, 0,0,0), prefix: :start_time %>
-				and
-				<%= select_time Time.new(2001, 1, 1, 23,59,0), prefix: :end_time %>
-				<br />
-				Day of the week
-				<%= select(:weekday, :day, Case::DAYS) %>
+		<div class="expandable">
+			<a href="#">
+				<div class="titlebar">
+					<span class="arrow">▼</span> About
 				</div>
-				<div>
-					<h4>Matching incident type:</h4>
+			</a>
+			<div class="contents">
+				Bacon ipsum dolor amet ut ipsum spare ribs eiusmod flank beef ham est dolor jowl.
+				Bacon rump minim short loin non ullamco. Eu commodo bacon pork chop, meatball laborum aliqua chuck shank.
+				Ut cillum aute rump ipsum drumstick porchetta short ribs dolore short loin commodo laboris.
+			</div>
+		</div>
+			<%= form_tag({controller: "case", action: "search"}, method:"post") do %>
+			<div class="expandable">
+				<a href="#">
+					<div class="titlebar">
+						<span class="arrow">&#9654;</span> Search by date
+					</div>
+				</a>
+				<div class="contents hidden">
+					Between <%= select_date Date.new(2013,5,17), prefix: :start_date %>
+					and <%= select_date Date.today, prefix: :end_date %>
+					<br />
+					Time of incident between 
+					<%= select_time Time.new(2001,1, 1, 0,0,0), prefix: :start_time %>
+					and
+					<%= select_time Time.new(2001, 1, 1, 23,59,0), prefix: :end_time %>
+					<br />
+					Day of the week
+					<%= select(:weekday, :day, Case::DAYS) %>
+				</div>
+			</div>
+			<div class="expandable">
+				<a href="#">
+					<div class="titlebar">
+						<span class="arrow">&#9654;</span> Search by incident type
+					</div>
+				</a>
+				<div class="contents hidden">
 					<div id="any">
 						<%= check_box_tag :all, '1', checked='checked' %><%= label_tag :all, "Any" %>
 					</div>
@@ -35,10 +55,10 @@
 						</div>
 					</div>
 				</div>
-				<div id="submit">
-					<%= submit_tag "Search" %>
-				</div>
-			<% end %>
-		</div>
+			</div>
+			<div id="submit">
+				<%= submit_tag "Search" %>
+			</div>
+		<% end %>
 	</div>
 </div>
