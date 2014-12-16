@@ -23,7 +23,12 @@
 					Between <%= select_date @start_date, prefix: :start_date, order: [:month, :day, :year], start_year: 2013, end_year: Date.today.year %>
 					and <%= select_date @end_date, prefix: :end_date, order: [:month, :day, :year], start_year: 2013, end_year: Date.today.year %>
 					<br />
-					Time of incident between 
+					Time of incident between
+					<%= select "start_time", "hour", Case::HOURS, selected: "12" %><%= select "time", "minute", Case::MINUTES, selected: "00" %><%= select "time", "ampm", ["AM", "PM"], selected: "AM" %>
+					and
+					<%= select "start_time", "hour", Case::HOURS, selected: "11" %><%= select "time", "minute", Case::MINUTES, selected: "59" %><%= select "time", "ampm", ["AM", "PM"], selected: "PM" %>
+
+					<br />
 					<%= select_time @start_time, prefix: :start_time, ampm: true%>
 					and
 					<%= select_time @end_time, prefix: :end_time, ampm: true %>
