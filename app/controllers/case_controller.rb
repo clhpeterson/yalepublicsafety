@@ -31,10 +31,12 @@ class CaseController < ApplicationController
     else
       @categories = Array.new
     end
+    @expanded = params[:expanded]
   	render "show"
   end
   def show
     @days = Case::DAYS
+    @expanded = "about-expand"
     @start_date = Date.new(2013, 5, 17)
     @end_date = Date.today
     @start_hour = "12"

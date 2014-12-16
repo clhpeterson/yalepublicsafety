@@ -21,26 +21,28 @@
 				</a>
 				<div class="contents hidden" id="date-contents">
 					<div class="date-columns">
-						Start date:<br />
+						<strong>Start date:</strong><br />
 							<%= text_field_tag :start_date, @start_date.to_s %> <br />
-						End date:<br />
+						<strong>End date:</strong><br />
 							<%= text_field_tag :end_date, @end_date.to_s %> <br />
-						Start time:<br />
+						<strong>Start time:</strong><br />
 							<%= select "start_time", "hour", Case::HOURS, selected: @start_hour %>
 							<%= select "start_time", "minute", Case::MINUTES, selected: @start_minute %>
 							<%= select "start_time", "ampm", ["AM", "PM"], selected: @start_ampm %> <br />
-						End time:<br />
+						<strong>End time:</strong><br />
 							<%= select "end_time", "hour", Case::HOURS, selected: @end_hour %>
 							<%= select "end_time", "minute", Case::MINUTES, selected: @end_minute %>
 							<%= select "end_time", "ampm", ["AM", "PM"], selected: @end_ampm %><br />
 					</div>
 					<div class="date-columns">
-						Day of the week
+						<strong>Day(s) of the week:</strong>
+						<div id="weekdays">
 						<ul>
 							<% (Case::DAYS).each do |day| %>
 								<li><%= check_box_tag "days[]", day, @days.include?(day) %><%= label_tag :day, day %></li>
 							<% end %>
 						</ul>
+						</div>
 					</div>
 				</div>
 			</div>

@@ -13,6 +13,14 @@ $search_background:#E3E3E3;
 		display:table;
 		background-color: $search_background;
 	}
+	#weekdays {
+		background-color: white;
+		margin: 0px;
+		padding: 2px;
+		li {
+			margin: 4px;
+		}
+	}
 	.any {
 		font-weight: bold;
 	}
