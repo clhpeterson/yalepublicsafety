@@ -2,25 +2,28 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-$table_border:#DEDEDE;
+$table_border:#919191;
+$odd_background:#CCD9E0;
 $results_background:white;
 
 .cases {
 	table {
-		width:100%;
-		margin:auto;
-		border: 1px solid $table_border;
+		width:calc(100% - 20px);
+		margin:10px;
+		border: 2px solid $table_border;
 		border-collapse:collapse;
-		//color:#32CF21;
 	}
 	tr th {
-		border: 1px solid $table_border;
+		border: 2px solid $table_border;
 	}
 	th {
 		text-align:left;
 	}
+	tr.even {
+		background-color: $odd_background;
+	} 
 	td {
-		border: 1px solid $table_border;
+		border: 2px solid $table_border;
 		padding: 1px 5px 1px 5px;
 	}
 	.heading {

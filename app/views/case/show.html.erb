@@ -11,7 +11,7 @@
 	<div class="cases">
 	<table>
 		<thead>
-			<tr class="heading">
+			<tr class="heading even">
 				<th>Date Reported</th>
 				<th>Incident Type</th>
 				<th>Date Occurred</th>
@@ -20,7 +20,7 @@
 			</tr>
 		</thead>
 	<% @cases.each do |c| %>
-	<tr>
+	<tr class="<%= cycle('odd', 'even') %>">
 		<td><%= c.date_reported %></td>
 		<td><%= c.type_of_incident %></td>
 		<td><%= c.date_occurred %></td>

@@ -1,6 +1,5 @@
-$search_background:#E3E3E3;
-$titlebar:gray;
-$rounded-radius:0px;
+$search_background:#CCD9E0;;
+$titlebar:#3D4447;
 
 .search {
 	margin:10px;
@@ -8,7 +7,6 @@ $rounded-radius:0px;
 	height:450px;
 	position:relative;
 	.search-inner {
-		border-radius:$rounded-radius;
 		margin:0px;
 		padding:0px;
 		height:100%;
@@ -23,9 +21,6 @@ $rounded-radius:0px;
 		li {
 			margin: 4px;
 		}
-	}
-	#about-title {
-		border-radius:$rounded-radius $rounded-radius 0px 0px;
 	}
 	.any {
 		font-weight: bold;
