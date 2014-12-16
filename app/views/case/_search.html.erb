@@ -4,7 +4,7 @@
 			Find Incidents
 		</div>
 		<div class="form-contents">
-			<%= form_tag({controller: "case", action: "search"}, method:"get") do %>
+			<%= form_tag({controller: "case", action: "search"}, method:"post") do %>
 				<div>
 				Between <%= select_date Date.new(2013,5,17), prefix: :start_date %>
 				and <%= select_date Date.today, prefix: :end_date %>
