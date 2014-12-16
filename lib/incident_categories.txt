@@ -1,3 +1,4 @@
+any
 assault
 	assault-weapon-non firearm
 	assaulting a police officer or firefighter

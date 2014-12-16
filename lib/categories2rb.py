@@ -31,16 +31,16 @@ def get_types_as_dict(filename):
 def write_ruby_from_list(iterable):
     for item in sorted(iterable):
         first = re.sub(r"[^a-z].*","",item)
-        print ('<li><%%= check_box_tag :%s %%><%%= label_tag :%s, "%s"%%></li>'%
-               (first, first, item.capitalize()))
+        print ('<li><%%= check_box_tag :"categories[]", "%s", @categories.include?("%s") %%><%%= label_tag :%s, "%s"%%></li>'%
+               (first, first, first, item.capitalize()))
 
 def write_ruby_from_dict(narrow_dict):
     for key in sorted(narrow_dict.keys()):
         value = narrow_dict[key]
         keynam = key.replace("'", r"\'").replace('"', r'\"').upper()
-        firsts = " ".join([re.sub(r"[^a-z].*","",item) for item in value])
-        print ('<li data_case_category="%s"><%%= check_box_tag :"%s" %%><%%= label_tag :"%s", "%s"%%></li>'%
-               (firsts, keynam, keynam, key.capitalize()))
+        firsts = " ".join([re.sub(r"[^a-z].*","",item) for item in value]) + " any"
+        print ('<li data_case_category="%s"><%%= check_box_tag :"incidents[]", "%s", @incidents.include?("%s") %%><%%= label_tag :"%s", "%s"%%></li>'%
+               (firsts, keynam, keynam, keynam, key.capitalize()))
 
 #narrow = get_types_as_dict("incident_categories.txt")
 #write_ruby_from_dict(narrow)

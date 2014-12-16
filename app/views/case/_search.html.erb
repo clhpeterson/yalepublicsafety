@@ -6,13 +6,13 @@
 		<div class="form-contents">
 			<%= form_tag({controller: "case", action: "search"}, method:"post") do %>
 				<div>
-				Between <%= select_date Date.new(2013,5,17), prefix: :start_date %>
-				and <%= select_date Date.today, prefix: :end_date %>
+				Between <%= select_date @start_date, prefix: :start_date, order: [:month, :day, :year] %>
+				and <%= select_date @end_date, prefix: :end_date, order: [:month, :day, :year] %>
 				<br />
 				Time of incident between 
-				<%= select_time Time.new(2001,1, 1, 0,0,0), prefix: :start_time %>
+				<%= select_time @start_time, prefix: :start_time%>
 				and
-				<%= select_time Time.new(2001, 1, 1, 23,59,0), prefix: :end_time %>
+				<%= select_time @end_time, prefix: :end_time %>
 				<br />
 				Day of the week
 				<%= select(:weekday, :day, Case::DAYS) %>
@@ -20,7 +20,7 @@
 				<div>
 					<h4>Matching incident type:</h4>
 					<div id="any">
-						<%= check_box_tag :all, '1', checked='checked' %><%= label_tag :all, "Any" %>
+						<%= check_box_tag :all, '1', false %><%= label_tag :all, "Any" %>
 					</div>
 					<div id="columns">
 						<div class="column left">
