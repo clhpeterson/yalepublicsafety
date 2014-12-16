@@ -10,12 +10,14 @@ $search_background:#E3E3E3;
 		padding:0px;
 		height:100%;
 		text-align:left;
+		display:table;
 		background-color: $search_background;
 	}
 	.any {
 		font-weight: bold;
 	}
 	.expandable {
+		display:table-row;
 		a {
 			text-decoration:none;
 		}
@@ -33,7 +35,7 @@ $search_background:#E3E3E3;
 		color:white;
 		background-color:gray;
 	}
-	#date-select {
+	#date-contents {
 		text-align:center;
 	}
 	.date-columns {
@@ -57,12 +59,13 @@ $search_background:#E3E3E3;
 		padding:0px;
 	}
 	#columns {
-		width:95%;
-		margin:auto;
+		height:100%;
 		text-align:center;
+		margin:auto;
 	}
 	.column {
-		height:200px;
+		height:240px;
+		margin:10px;
 		overflow:auto;
 		width:40%;
 		text-align:left;

@@ -6,10 +6,7 @@ $(".search").ready(function(){
 
 	$(".expandable a").click(function( event ) {
 		event.preventDefault();
-		$(".search .contents").addClass("hidden");
-		$(".search .arrow").text("▶");
-		$(".contents", $(this).parent()).removeClass("hidden");
-		$(".arrow", $(this).parent()).text("▼");
+		expandExpandable($(this).parent());
 	});
 
 	$("input#start_date").datepicker({
@@ -19,6 +16,10 @@ $(".search").ready(function(){
 			dateFormat:"yy-mm-dd"
 		});
 
+
+	var toExpand = $(".search #expand-field").attr("value");
+	console.log(toExpand);
+	expandExpandable($(".search #"+toExpand));
 });
 
 function updateNarrow(value) {
@@ -26,5 +27,14 @@ function updateNarrow(value) {
 	$(".right li[data_case_category*='"+value+"']").each(function(){
 		$("input", this).prop("checked", is_checked);
 	});
+}
 
+function expandExpandable(expandable) {
+	$(".search .contents").addClass("hidden");
+	$(".search .arrow").text("▶");
+
+	$(".contents", expandable).removeClass("hidden");
+	$(".arrow", expandable).text("▼");
+
+	$(".search #expand-field").val(expandable.attr("id"));
 }
