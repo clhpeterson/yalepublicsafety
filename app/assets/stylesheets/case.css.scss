@@ -11,6 +11,9 @@ $results_background:white;
 		border: 1px solid $table_border;
 		border-collapse:collapse;
 	}
+	tr th {
+		border: 1px solid $table_border;
+	}
 	td {
 		border: 1px solid $table_border;
 		padding: 1px 5px 1px 5px;
