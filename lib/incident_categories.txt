@@ -1,4 +1,3 @@
-any
 assault
 	assault-weapon-non firearm
 	assaulting a police officer or firefighter
@@ -129,7 +128,6 @@ sexual offense
 wanted person
 	wanted person new haven
 	wanted person other town
-violent crimes
 robbery
 	robbery attempt no weapon
 	robbery attempt oth weapon

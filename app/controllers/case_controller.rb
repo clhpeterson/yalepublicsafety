@@ -40,8 +40,7 @@ class CaseController < ApplicationController
     @end_date = Date.today
     @start_time = Time.new(2000, 1, 1, 0, 0, 0)
     @end_time = Time.new(2000, 1, 1, 23, 59, 0)
-    @all = "1"
-    @incidents = Array.new
+    @incidents = []
     @categories = Array.new
   	@cases = Case.all
   end

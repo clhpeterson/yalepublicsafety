@@ -29,10 +29,12 @@ def get_types_as_dict(filename):
     return narrow
 
 def write_ruby_from_list(iterable):
+    print '<li><%= check_box_tag :"categories[]", "any", @categories.include?("any") %><%= label_tag :any, "Any", class: "any" %></li>'
     for item in sorted(iterable):
         first = re.sub(r"[^a-z].*","",item)
         print ('<li><%%= check_box_tag :"categories[]", "%s", @categories.include?("%s") %%><%%= label_tag :%s, "%s"%%></li>'%
                (first, first, first, item.capitalize()))
+
 
 def write_ruby_from_dict(narrow_dict):
     for key in sorted(narrow_dict.keys()):
