@@ -45,8 +45,8 @@ class CaseController < ApplicationController
     @end_hour = "11"
     @end_minute = "59"
     @end_ampm = "PM"
-    @incidents = []
-    @categories = Array.new
+    @incidents = Case::INCIDENTS
+    @categories = ["any"]
   	@cases = Case.all
   end
 end
