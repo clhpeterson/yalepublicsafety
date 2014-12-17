@@ -58,6 +58,16 @@ $titlebar:#3D4447;
 		bottom:10px;
 		width:100%;
 		text-align:center;
+		input {
+			background-color:$titlebar;
+			color:white;
+			border:none;
+			padding:5px 15px 5px 15px;
+			border:1px solid gray;
+			border-radius:10px;
+			font-size:15px;
+			text-transform: uppercase;
+		}
 	}
 	#any {
 		margin-bottom:10px;
