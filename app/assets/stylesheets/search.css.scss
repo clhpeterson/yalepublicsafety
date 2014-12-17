@@ -27,12 +27,17 @@ $titlebar:#3D4447;
 	}
 	.expandable {
 		display:table-row;
+		position:relative;
 		a {
 			text-decoration:none;
 		}
 		.hidden {
 			height:0px;
 			visibility: hidden;
+		}
+		.contents {
+			position:relative;
+			padding:10px;
 		}
 	}
 	.titlebar {
@@ -58,6 +63,16 @@ $titlebar:#3D4447;
 		bottom:10px;
 		width:100%;
 		text-align:center;
+		input {
+			background-color:$titlebar;
+			color:white;
+			border:none;
+			padding:5px 15px 5px 15px;
+			border:1px solid gray;
+			border-radius:10px;
+			font-size:15px;
+			text-transform: uppercase;
+		}
 	}
 	#any {
 		margin-bottom:10px;
@@ -78,16 +93,17 @@ $titlebar:#3D4447;
 		overflow:auto;
 		width:40%;
 		text-align:left;
-		font-size:10pt;
+		font-size:11pt;
 		display:inline-block;
 		background-color:white;
+		li div {
+			display: table-cell;
+		}
+		li {
+			display: table;
+		}
 	}
 	.disabled {
 		color:gray;
-	}
-	.expandable {
-		.contents {
-			padding:10px;
-		}
 	}
 }

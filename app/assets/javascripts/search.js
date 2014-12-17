@@ -4,7 +4,7 @@ $(".search").ready(function(){
 		updateNarrow($(this).attr("value"));
 	});
 
-	$(".expandable a").click(function( event ) {
+	$(".expandable a.collapse-control").click(function( event ) {
 		event.preventDefault();
 		expandExpandable($(this).parent());
 	});
