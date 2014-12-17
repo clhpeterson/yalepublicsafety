@@ -29,10 +29,10 @@ def get_types_as_dict(filename):
     return narrow
 
 def write_ruby_from_list(iterable):
-    print '<li><%= check_box_tag :"categories[]", "any", @categories.include?("any") %><%= label_tag :any, "Any", class: "any" %></li>'
+    print '<li><div><%= check_box_tag :"categories[]", "any", @categories.include?("any") %></div><div><%= label_tag :any, "Any", class: "any" %></div></li>'
     for item in sorted(iterable):
         first = re.sub(r"[^a-z].*","",item)
-        print ('<li><%%= check_box_tag :"categories[]", "%s", @categories.include?("%s") %%><%%= label_tag :%s, "%s"%%></li>'%
+        print ('<li><div><%%= check_box_tag :"categories[]", "%s", @categories.include?("%s") %%></div><div><%%= label_tag :%s, "%s"%%></div></li>'%
                (first, first, first, item.capitalize()))
 
 
@@ -41,11 +41,11 @@ def write_ruby_from_dict(narrow_dict):
         value = narrow_dict[key]
         keynam = key.replace("'", r"\'").replace('"', r'\"').upper()
         firsts = " ".join([re.sub(r"[^a-z].*","",item) for item in value]) + " any"
-        print ('<li data_case_category="%s"><%%= check_box_tag :"incidents[]", "%s", @incidents.include?("%s") %%><%%= label_tag :"%s", "%s"%%></li>'%
+        print ('<li data_case_category="%s"><div><%%= check_box_tag :"incidents[]", "%s", @incidents.include?("%s") %%></div><div><%%= label_tag :"%s", "%s"%%></div></li>'%
                (firsts, keynam, keynam, keynam, key.capitalize()))
 
-#narrow = get_types_as_dict("incident_categories.txt")
-#write_ruby_from_dict(narrow)
+narrow = get_types_as_dict("incident_categories.txt")
+write_ruby_from_dict(narrow)
 
-broad, narrow = get_types_as_array("incident_categories.txt")
-write_ruby_from_list(broad)
+#broad, narrow = get_types_as_array("incident_categories.txt")
+#write_ruby_from_list(broad)
