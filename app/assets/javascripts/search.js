@@ -30,10 +30,10 @@ function updateNarrow(value) {
 }
 
 function expandExpandable(expandable) {
-	$(".search .contents").addClass("hidden");
+	$(".search .expandable").addClass("expand-hidden");
 	$(".search .arrow").text("▶");
 
-	$(".contents", expandable).removeClass("hidden");
+	$(expandable).removeClass("expand-hidden");
 	$(".arrow", expandable).text("▼");
 
 	$(".search #expand-field").val(expandable.attr("id"));

@@ -10,8 +10,9 @@
 				<%= render "about" %>
 			</div>
 		</div>
-			<%= form_tag({controller: "case", action: "search"}, method:"post") do %>
-			<div class="expandable" id="date-expand">
+		<%= form_tag({controller: "case", action: "search"}, method:"post") do %>
+		<div id="form-box">
+			<div class="expandable expand-hidden" id="date-expand">
 				<a href="#" class="collapse-control">
 					<div class="titlebar">
 						<span class="arrow">&#9654;</span> Search by date
@@ -44,7 +45,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="expandable" id="incidents-expand">
+			<div class="expandable expand-hidden" id="incidents-expand">
 				<a href="#" class="collapse-control">
 					<div class="titlebar">
 						<span class="arrow">&#9654;</span> Search by incident type
@@ -73,6 +74,7 @@
 				<%= submit_tag "Search" %>
 			</div>
 			<%= hidden_field_tag "expanded", @expanded, id: "expand-field" %>
+		</div>
 		<% end %>
 	</div>
 </div>
