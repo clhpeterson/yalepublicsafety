@@ -1,7 +1,7 @@
 <div class="search">
 	<div class="search-inner">
 		<div class="expandable" id="about-expand">
-			<a href="#">
+			<a href="#" class="collapse-control">
 				<div class="titlebar" id="about-title">
 					<span class="arrow">▼</span> About
 				</div>
@@ -12,7 +12,7 @@
 		</div>
 			<%= form_tag({controller: "case", action: "search"}, method:"post") do %>
 			<div class="expandable" id="date-expand">
-				<a href="#">
+				<a href="#" class="collapse-control">
 					<div class="titlebar">
 						<span class="arrow">&#9654;</span> Search by date
 					</div>
@@ -45,7 +45,7 @@
 				</div>
 			</div>
 			<div class="expandable" id="incidents-expand">
-				<a href="#">
+				<a href="#" class="collapse-control">
 					<div class="titlebar">
 						<span class="arrow">&#9654;</span> Search by incident type
 					</div>
