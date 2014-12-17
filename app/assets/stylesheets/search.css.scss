@@ -78,9 +78,15 @@ $titlebar:#3D4447;
 		overflow:auto;
 		width:40%;
 		text-align:left;
-		font-size:10pt;
+		font-size:12pt;
 		display:inline-block;
 		background-color:white;
+		li div {
+			display: table-cell;
+		}
+		li {
+			display: table;
+		}
 	}
 	.disabled {
 		color:gray;
